@@ -2,7 +2,7 @@ load("@io_bazel_rules_scala//scala_proto:scala_proto.bzl", "scalapb_proto_librar
 
 proto_library(
 	name = "proto",
-	srcs = ["one.proto"]
+	srcs = ["com/test/bazel/one.proto"]
 )
 
 scalapb_proto_library(
