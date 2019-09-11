@@ -2,7 +2,8 @@ load("@io_bazel_rules_scala//scala_proto:scala_proto.bzl", "scalapb_proto_librar
 
 proto_library(
 	name = "proto",
-	srcs = ["com/test/bazel/one.proto"]
+	srcs = ["com/test/bazel/one.proto"],
+	visibility = [ "//visibility:public" ]
 )
 
 scalapb_proto_library(
