@@ -1,15 +1,15 @@
 load("@io_bazel_rules_scala//scala_proto:scala_proto.bzl", "scalapb_proto_library")
 
+package(default_visibility = ["//visibility:public"])
+
 proto_library(
 	name = "proto",
-	srcs = ["com/test/bazel/one.proto"],
+	srcs = glob(["**/*.proto"]),
 	strip_import_prefix = "/" + package_name(),
-	visibility = [ "//visibility:public" ],
-    deps = [ "@bazel_proto_scala_test_two//three:proto" ]
+    deps = [ "@bazel_proto_scala_test_two//three:proto" ],
 )
 
 scalapb_proto_library(
 	name = "proto_scala",
 	deps = [":proto"],
-	visibility = [ "//visibility:public" ]
 )
