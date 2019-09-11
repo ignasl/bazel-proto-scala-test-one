@@ -1,7 +1,0 @@
-syntax = "proto3";
-
-package com.test.bazel;
-
-message OneMessage {
-	string message = 0;
-}
