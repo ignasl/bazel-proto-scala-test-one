@@ -7,5 +7,6 @@ proto_library(
 
 scalapb_proto_library(
 	name = "proto_scala",
-	deps = [":proto"]
+	deps = [":proto"],
+	visibility = [ "//visibility:public" ]
 )
