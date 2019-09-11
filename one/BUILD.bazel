@@ -4,7 +4,8 @@ proto_library(
 	name = "proto",
 	srcs = ["com/test/bazel/one.proto"],
 	strip_import_prefix = "/" + package_name(),
-	visibility = [ "//visibility:public" ]
+	visibility = [ "//visibility:public" ],
+    deps = [ "@bazel_proto_scala_test_two//three:proto" ]
 )
 
 scalapb_proto_library(

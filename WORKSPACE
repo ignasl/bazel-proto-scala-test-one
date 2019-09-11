@@ -46,3 +46,9 @@ http_archive(
     url = "https://github.com/bazelbuild/bazel-skylib/releases/download/{}/bazel-skylib.{}.tar.gz".format (skylib_version, skylib_version),
     sha256 = "2ef429f5d7ce7111263289644d233707dba35e39696377ebab8b0bc701f7818e",
 )
+
+git_repository(
+    name = "bazel_proto_scala_test_two",
+    remote = "git@github.com:ignasl/bazel-proto-scala-test-two.git",
+    commit = "1f538fe2c384581eb88f74c007ed4ea18dea6ae7"
+)
